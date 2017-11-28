@@ -12,7 +12,9 @@ This is a test e-mail message.
 
 try:
    smtpObj = smtplib.SMTP('smtp.gmail.com')
+   smtpObj.starttls()
+   smtpObj.login('user', 'pass')
    smtpObj.sendmail(sender, receivers, message)         
-   print "Successfully sent email"
+   print "Successfully sent tls email"
 except smtplib.SMTPException:
-   print "Error: unable to send email"
+   print "Error: unable to send email using tls"

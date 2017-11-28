@@ -1,10 +1,11 @@
-#import sys
 
-#sys.path.insert(0, 'dns query')
 import sockdnsreq
 print
 
 import emailsend
+print
+
+import emailsendsec
 print
 
 import ftplist
@@ -23,4 +24,3 @@ print
 
 import spamming
 print
-
