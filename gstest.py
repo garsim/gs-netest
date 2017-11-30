@@ -1,26 +1,51 @@
+try:
+	import sockdnsreq
+	print
+except Exception as e:
+	print e
 
-import sockdnsreq
-print
+try:
+	import emailsend
+	print
+except Exception as e:
+	print e
 
-import emailsend
-print
+try:
+	import emailsendsec
+	print
+except Exception as e:
+	print e
 
-import emailsendsec
-print
+try:
+	import ftplist
+	print
+except Exception as e:
+	print e
 
-import ftplist
-print
-import ftpdownloader
-print
+try:
+	import ftpdownloader
+	print
+except Exception as e:
+	print e
 
-import ftpupload
-print
+try:
+	import ftpupload
+	print
+except Exception as e:
+	print e
 
-import basichttpdownloader
-print
+try:
+	import basichttpdownloader
+	print
+except Exception as e:
+	print e
 
-import httppost
-print
+try:
+	import httppost
+	print
+except Exception as e:
+	print e
 
-import spamming
-print
+#remove comment if you have office 2007 on your machine
+#import spamming
+#print
