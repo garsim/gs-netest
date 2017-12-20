@@ -5,6 +5,12 @@ except Exception as e:
 	print e
 
 try:
+	import multiple_sockdnsreq
+	print
+except Exception as e:
+	print e
+
+try:
 	import emailsend
 	print
 except Exception as e:
