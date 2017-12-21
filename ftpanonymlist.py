@@ -1,9 +1,6 @@
 from ftplib import FTP
 
-port=21
 ip="ftp.indirizzo.it"
-password = "a@a.a"
-user = "utente"
 
 ftp = FTP(ip)
 ftp.login() #user anonymous, passwd anonymous
