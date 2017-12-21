@@ -6,8 +6,6 @@ def f(s):
 
 port=21
 ip="ftp.indirizzo.it"
-password = "a@a.a"
-user = "utente"
 
 ftp = FTP(ip)
 ftp.login() #user anonymous, passwd anonymous
@@ -23,8 +21,8 @@ ftp.cwd("/extras")
 
 try:
 	ftp.retrbinary("RETR " + nameOfFile, open(nameOfFile, 'wb').write)
-	print (nameOfFile + " - FTP Download OK")
+	print (nameOfFile + " - FTP Download *as Anonymous* OK")
 	#ftp.retrbinary("RETR " + nameOfFile,f) 
 	##for printing and not save file
 except:
-	print "Error download from ftp"
+	print "Error download from ftp *as Anonymous*"

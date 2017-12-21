@@ -7,8 +7,8 @@ ftp.login() #user anonymous, passwd anonymous
 
 try:
 	files = ftp.nlst()
-	print('FTP List:')
+	print('FTP List *as Anonymous*:')
 	for i,v in enumerate(files,1):
 	    print i,"->",v
 except:
-	print "Error FTP List"
+	print "Error FTP List *as Anonymous*"

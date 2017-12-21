@@ -23,6 +23,25 @@ except Exception as e:
 	print e
 
 try:
+	import ftpanonymlist
+	print
+except Exception as e:
+	print e
+
+try:
+	import ftpanonymdownloader
+	print
+except Exception as e:
+	print e
+
+try:
+	import ftpanonymupload
+	print
+except Exception as e:
+	print e
+
+
+try:
 	import ftplist
 	print
 except Exception as e:
