@@ -1,4 +1,4 @@
-import ftplib 
+from ftplib import FTP
 
 ip="ftp.indirizzo.it"
 ftp = FTP(ip)
