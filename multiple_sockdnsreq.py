@@ -1,14 +1,19 @@
 import socket
 
+count = 0
+ret=[]
 try:
 	with open("siteswithresults.txt", "r") as ins:
 		for linetot in ins:
 			line = linetot.rstrip()
 			site = line.split(' ')[0]
 			expected = line.split(' ')[1]
-
+			count+=1
 			try:
 				add1 = socket.gethostbyname(site)
+
+				if add1 not in ret:
+					ret.append(add1)
 
 				if add1 == expected:
 					print ('Query to ' + site + ' OK: ' + add1)
@@ -20,14 +25,17 @@ try:
 					print ('Query to ' + site + ' KO: ' + add1 + ' is in black list')
 				else:
 					print ('Query to ' + site + ' not as expected: ' + add1 + ' ** but NOT in black list')
-			# asd
+			
 			except Exception as e:
 				#print (e)
 				if expected == 'error':
 					print ('Query to ' + site + ' OK: not exist')
 				else:
 					print ('Query to ' + site + ' not as expected: now not reachable' + add1)
-
+	if len(ret)==1:
+		print ('Response is always the same')
+	else:
+		print ('Multiple responses')
 except Exception as e:
 	# print ('error: sites.txt not found')
 	print(e)
